@@ -11,11 +11,15 @@ body {
 .cardContainer {
   display: flex;
   gap: 24px;
+  justify-content: center;
+  margin-top : 80px;
 }
 
 .buttonDiv {
   display: flex;
   justify-content: end;
+  margin-right: 200px;
+  margin-top : 80px;
 }
 
 .addTaskButton {
