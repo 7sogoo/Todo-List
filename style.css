@@ -1,89 +1,121 @@
-body{
-    background-color: #1A1A1A;
-    padding: 30px;
+* {
+  margin: 0;
+  box-sizing: border-box;
 }
-
-.buttonDiv{
-    display: flex;
-    justify-content: end;
-}
-
-.addTaskButton {
-    background-color: green;
-    border: none;
-    padding: 12.5px 20px;
-    color: white;
-    font-weight: 600;
-    border-radius: 4px;
-    font-size: 16px;
-}
-
-.title {
-    font-size: 18px;
-    font-weight: 700;
+body {
+  background: #1a1a1a;
+  height: 100vh;
+  width: 100%;
 }
 
 .cardContainer {
+  display: flex;
+  gap: 24px;
+}
+
+.buttonDiv {
+  display: flex;
+  justify-content: end;
+}
+
+.addTaskButton {
+  background-color: green;
+  border: none;
+  padding: 12.5px 20px;
+  color: white;
+  font-weight: 600;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.board {
+  display: flex;
+  width: 280px;
+  min-width: 280px;
+  min-height: 672px;
+  padding: 20px;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  border-radius: 12px;
+  border: 1px solid #333;
+  background: #101010;
+  color: white;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.headerTitle {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.circle {
+  width: 12px;
+  height: 12px;
+  background: white;
+  border-radius: 50%;
+}
+
+.list {
     display: flex;
-    gap: 2vw;
-    margin-top: 40px;
-}
-
-.dot{
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-}
-
-.card{
-    height: 672px;
-    width: 280px;
-    background-color: #101010;
-    color: white;
-    border: 1px solid rgba(255, 255, 255, 0.5);
-    border-radius: 16px;
-}
-
-.cardHeader{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 20px;
-}
-
-.number{
-    font-size: 12px;
-    font-weight: 400;
-    color: rgba(255, 255, 255, 0.7);
-}
-
-.cardHeaderTitle{
-    display: flex;
+    flex-direction: column;
     gap: 12px;
-    align-items: center;
+    margin-top: 24px;
 }
 
 .task {
-    display: flex;
-    align-items: center;
-    gap:8px;
-    background-color: #1A1A1A;
-    border-radius: 8px;
-    margin: 10px 20px;
-    padding: 8px 12px;
-    font-size: 12px;
+  display: flex;
+  width: 240px;
+  padding: 12px;
+  align-items: center;
+  gap: 8px;
+  border-radius: 8px;
+  background: #1a1a1a;
+}
+
+.text {
+  flex: 1;
+  opacity: 0.7;
+}
+
+.black {
+  border: 1px solid white;
+  background: #000;
 }
 
 .blackDot {
-    width: 16px;
-    height: 16px;
-    border: 1px solid white;
-    background-color: transparent;
-    border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  border: 1px solid white;
+  background-color: transparent;
+  border-radius: 50%;
 }
 
-.text{
-    width: 144px;
-    height: 30px;
-    opacity: 0.7;
+.backdrop {
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #00000080;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+.dialog {
+  z-index: 2;
+  width: fit-content;
+  background: white;
+  padding: 20px;
+}
+
+.tasks {
+  background: white;
 }
